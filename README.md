@@ -1,9 +1,9 @@
 # Shuffle
 A web app which plays a random song from YouTube.
 
-[![Screenshot of Shuffle]()]()
+[![Screenshot of Shuffle](https://github.com/sndsabin/Shuffle/blob/master/screenshot.png)](https://sndsabin.github.io/Shuffle/)
 
-Live version: [Shuffle]()
+Live version: [Shuffle](https://sndsabin.github.io/Shuffle/)
 
 ## Usage
 
