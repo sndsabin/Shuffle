@@ -1,0 +1,112 @@
+body {
+  min-height: 75rem; /* Can be removed; just added for demo purposes */
+}
+
+/* Navbar */
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+	margin: 0 auto;
+}
+
+/* Content */
+.video-wrapper {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-color: #fff;
+
+}
+
+.video-wrapper-heading {
+  font-weight: 200;
+}
+
+.video-wrapper .container {
+  max-width: 40rem;
+}
+
+.video-wrapper .row {
+  overflow: hidden;
+}
+
+.playlist {
+  
+}
+
+.sidebar-playlist-content{
+  max-height: 480px;
+  overflow-y: scroll;
+}
+
+.album {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+
+
+/* Card */
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+
+/* Heading */
+.other-playlist {
+  font-family: 'Quicksand', sans-serif;
+}
+.sidebar-playlist {
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Footer */
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+/* Side Bar Playlist */
+
+/* Scroll bar */
+.playlist::-webkit-scrollbar {
+    width: 12px;
+    height: 1px;
+}
+
+.playlist::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+
+/* Helper */
+.font-size-24 {
+  font-size: 24px;
+}
+.center{
+  margin: 0 auto;
+}
+
+

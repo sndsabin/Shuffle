@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Shuffle: Play a Random YouTube Song</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="shortcut icon" href="img/favicon.ico"/>
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<!-- Custom Font -->
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet" type="text/css"/>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<!-- Search engine meta tags -->
+	<meta name="description" content="Shuffle is an open source web app which continuously plays a random most viewed, top of the billboard or latest song from YouTube.">
+	<!-- Facebook meta tags -->
+	<meta property="og:title" content="Shuffle: Play a random YouTube song.">
+	<meta property="og:description" content="A web app which plays a random song from YouTube.">
+	<!-- Twitter meta tags  -->
+	<meta name="twitter:title" content="Shuffle: Play a random YouTube song.">
+	<meta name="twitter:description" content="A web app which plays a random song from YouTube.">
+</head>
+
+<body>
+	<!-- Navigation bar content -->
+	<nav class="navbar navbar-toggleable-md">
+		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-toggler" aria-controls="navbar-toggler" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="navbar-brand" href="/"><i class="fa fa-random" aria-hidden="true"></i> Shuffle</a>
+	</nav>
+
+	<div class="container-fluid video-wrapper">
+		<div class="row">
+			<div class="col-8">
+				<div class="tab-content">
+					<div class="player" id="video-player"></div>
+					<div class="info" id="video-details"></div>
+				</div>
+			</div>
+			<div class="col-4 playlist">
+				<div class="sidebar-playlist" id="playlist-title">
+					<div class="btn btn-default btn-lg load">
+						<i class="fa fa-spinner fa-spin"></i>
+						Choosing a Playlist for you
+					</div>
+				</div>				
+				<div class="checkbox-option" id="checkbox-container"></div>
+				<div class="sidebar-playlist-content" id="sidebar-playlist-content">
+					<div class="list-group" id="list-tab" role="tablist"></div>
+				</div>
+				
+
+			</div>
+			
+		</div>     
+	</div>
+
+
+
+	<div class="album text-muted">
+		<div class="container">
+			<h2 class="other-playlist text-center">Other Playlists</h2>
+			<div class="row" id="other-playlist-container"></div>
+			<div class="row" id="loading-button-container"></div>
+		</div>
+	</div>
+
+	<footer class="text-muted">
+		<div class="container">
+			<p>
+				<a class="nav-link float-left" href="#about" data-toggle="modal" data-target=".about-modal"><i class="fa fa-tag" aria-hidden="true"></i> About</a>
+				<a class="nav-link float-left" href="#" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Contribute</a>
+				<a class="nav-link float-right" href="#"><i class="fa fa-arrow-up" aria-hidden="true"></i></a>
+			</p>
+		</div>
+	</footer>
+	
+	<!-- About modal -->
+	<div class="modal fade about-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">About Shuffle</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					Plays Random YouTube Song.
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="bundle.js"></script>
+	<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+</body>
+</html>
