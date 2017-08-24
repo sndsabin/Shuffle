@@ -2,6 +2,13 @@ import YouTubePlayer from 'youtube-player';
 
 class YoutubeIframe
 {
+	/**
+	 * Constructor
+	 *
+	 * @param {string} videoId 
+	 * @param {integer} width 
+	 * @param {integer} height 
+	 */
 	constructor(videoId, width, height) 
 	{
 
@@ -15,6 +22,11 @@ class YoutubeIframe
 
 	}
 
+	/**
+	 * load the video iframe for particular videoId
+	 * 
+	 * @return void
+	 */
 	build() {
 		
 		this.player = YouTubePlayer('video-player', {
@@ -28,7 +40,12 @@ class YoutubeIframe
 	        });
 	}
 
-
+	/**
+	 * Queues the video 
+	 *
+	 * @param {string} videoId 
+	 * @return void
+	 */
 	cueAndPlay(videoId) 
 	{
 		this.player.cueVideoById({
@@ -38,6 +55,12 @@ class YoutubeIframe
 		this.player.playVideo();
 	}
 
+	/**
+	 * Loads the video for specified videoId
+	 *
+	 * @param {string} videoId 
+	 * @return void
+	 */
 	loadVideoById(videoId) 
 	{
 		this.player.loadVideoById(videoId);

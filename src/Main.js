@@ -1,7 +1,10 @@
 import YoutubeChannel from './YoutubeChannel';
 
 class Main 
-{
+{	
+	/**
+	 * Constructor
+	 */
 	constructor() 
 	{
 		this.channel;
@@ -10,12 +13,20 @@ class Main
 
 	}
 
+	/**
+	 * Responsible for loading all the contents 
+	 * in the view
+	 */
 	loadYoutubeData() 
 	{
 		this.channel = new YoutubeChannel();
 
 	}
-
+	
+	/**
+	 * Listens for the keypress event
+	 * @return void
+	 */
 	listenWindowEvent() {
 		window.addEventListener('keydown', (event) => {
 			// O to recreate Other Playlist Section

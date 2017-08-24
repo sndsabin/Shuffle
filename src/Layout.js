@@ -2,12 +2,19 @@ import YoutubeChannel from './YoutubeChannel';
 
 class Layout 
 {
+	/**
+	 * Constructor
+	 */
 	constructor() 
 	{
 		this.bakeVideodetails();
 		this.bakeLoadingButton();
 	}
 
+	/**
+	 * Creates loading layout for the video-container 
+	 * section and appends it to view
+	 */
 	bakeVideodetails() 
 	{
 		// Loading Icon
@@ -15,6 +22,13 @@ class Layout
 
 	}
 
+	/**
+	 * Creates layout for Sidebar Playlist Section
+	 * and appends it to view
+	 *
+	 * @param {Object} playlistItemsDetails 
+	 * @return {DOM element} childElementItem
+	 */
 	bakeSideBarPlaylist(playlistItemsDetails) 
 	{
 		
@@ -35,6 +49,13 @@ class Layout
 		
 	}
 
+	/**
+	 * Creates layout for single item in Other Playlist Section
+	 * and appends it to view
+	 *
+	 * @param {Object} playlistDetails
+	 * @return {DOM element} childDiv 
+	 */
 	bakeOtherPlaylist(playlistDetails) 
 	{
 
@@ -45,7 +66,7 @@ class Layout
 
 		let childDiv = document.createElement('div');
 		childDiv.setAttribute('class', 'card');
-		childDiv.style.width = '20rem';
+		childDiv.style.width = '21.5rem';
 
 		let aTagFirst = document.createElement('a');
 		aTagFirst.setAttribute('href', '#');
@@ -82,6 +103,10 @@ class Layout
 		return childDiv;
 	}
 
+	/**
+	 * Creates the loading button DOM element and
+	 * appends in the Other Playlist Section
+	 */
 	bakeLoadingButton() 
 	{
 		let loadingContainer = document.getElementById('loading-button-container');
@@ -102,6 +127,12 @@ class Layout
 
 	}
 
+	/**
+	 * Creates and appends a layout for single item 
+	 * in the sidebar playlist
+	 *
+	 * @return {DOM element} [aTag]
+	 */
 	prepareSideBarPlaylistContent(videoId, title) 
 	{
 		let sideBarPlaylist =  document.getElementById('list-tab');
@@ -117,6 +148,9 @@ class Layout
 		return aTag;
 	}
 
+	/**
+	 * Creates and appends the checkbox in the sidebar
+	 */
 	prepareCheckbox() 
 	{
 		let checkboxContainer = document.getElementById('checkbox-container');
@@ -145,17 +179,25 @@ class Layout
 		checkboxContainer.appendChild(labelTag);
 	}
 
-	prepareSideBarPlaylistHeadingContent(channelTitle) 
+	/**
+	 * Sets the title of the sidebar playlist to 
+	 * current selected playlist
+	 */
+	prepareSideBarPlaylistHeadingContent(playlistTitle) 
 	{
 		let sideBarPlaylistHeading = document.getElementById('playlist-title');
 		let h2Tag = document.createElement('h2');
 		h2Tag.setAttribute('class', 'sidebar-playlist font-size-24');
-		h2Tag.innerHTML = channelTitle;
+		h2Tag.innerHTML = playlistTitle;
 
 		sideBarPlaylistHeading.innerHTML = ''; // Remove the Loading Button
 		sideBarPlaylistHeading.appendChild(h2Tag);
 	}
 
+	/**
+	 * Creates the loading div for the video-player div
+	 * while it is loading
+	 */
 	prepareLoadingVideoFrame()
 	{
 
@@ -176,6 +218,15 @@ class Layout
 		videoPlayer.appendChild(loadingDiv);
 	}
 
+	/**
+	 * Sets the style of Sidebar item of Current ong Playing
+	 * to active and removes the active from style of 
+	 * sidebar item of previous song
+	 * 
+	 * @param  {string} currentSelectedItemId
+	 * @param  {string} previousSelectedItemId
+	 * @return void
+	 */
 	updateListItemActiveState(currentSelectedItemId, previousSelectedItemId) {
 
 		let currentItem = document.getElementById('sidebar-a#'+currentSelectedItemId);
@@ -187,7 +238,7 @@ class Layout
 		currentItem.setAttribute('class', 'list-group-item active');
 
 		// To Scroll into view
-		debugger;
+		
 		let itemContainer = document.getElementById('sidebar-playlist-content');
 		let topPosition = currentItem.offsetTop; // the distance between the top of itemContainer and currentItem
 
