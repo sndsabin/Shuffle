@@ -20,7 +20,7 @@
     "webpack-dev-server": "^2.5.1"
   },
   "dependencies": {
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "youtube-player": "^5.4.0"
   }
 }
